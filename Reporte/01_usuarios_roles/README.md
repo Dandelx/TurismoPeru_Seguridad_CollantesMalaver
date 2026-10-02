@@ -8,3 +8,10 @@ El rol `db_owner` otorga control total sobre la base de datos, lo que permite re
 2. **Analista:** Su función es puramente de lectura y generación de reportes. Un analista con `db_owner` podría alterar registros contables o eliminar datos financieros esenciales para la toma de decisiones.
 
 Aplicar el **Principio de Mínimo Privilegio** garantiza que cada usuario o rol cuente únicamente con los accesos estrictamente necesarios para cumplir con sus funciones, reduciendo vectores de ataque y errores humanos.
+
+-- 1. Consulta permitida (Lectura de datos)
+SELECT TOP 5 * FROM EACM.pago;
+
+-- 2. Intento de modificación (Denegado por SQL Server)
+INSERT INTO EACM.pago (id_reserva, monto, fecha_pago, medio_pago)
+VALUES (1, 150.00, '2026-10-02', 'Tarjeta');
