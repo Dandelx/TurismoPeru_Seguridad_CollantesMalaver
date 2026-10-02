@@ -1,0 +1,16 @@
+# Archivos de configuración de editor / IDE
+.vscode/
+.idea/
+
+# Archivos temporales de base de datos y respaldos locales no requeridos
+*.tmp
+*.log
+*.bak
+
+# Archivos de sistema operativo
+Thumbs.db
+.DS_Store
+
+# Archivos de entorno y credenciales (si existieran)
+.env
+*.user
